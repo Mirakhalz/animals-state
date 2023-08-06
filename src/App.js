@@ -11,15 +11,13 @@ function getRandomAnimal() {
 function App() {
     const [animals, setAnimals] = useState([]);
 
-
-
     //create an event handler functions use on + handle + eventName
     const handleClick = () => {
         setAnimals([...animals, getRandomAnimal()])
     };
 
     const renderedAnimals = animals.map((animal, index) => {
-        return <AnimalShow type={animal} key={index} />
+        return <AnimalShow key={index}  type={animal} />
     });
 
     return (
